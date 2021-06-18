@@ -1,0 +1,21 @@
+import kotlin.math.roundToInt
+
+
+class TV (var height: Double, var width: Double) {
+    // 1
+    val diagonal: Int
+        get() {
+            // 2
+            val result = Math.sqrt(height * height + width * width)
+            // 3
+            return result.roundToInt()
+        }
+}
+
+fun main() {
+    val tv = TV(height = 53.93, width = 95.87)
+    val size = tv.diagonal
+    println(size)
+    tv.width = tv.height
+    println("New tv size: ${tv.diagonal}")
+}
